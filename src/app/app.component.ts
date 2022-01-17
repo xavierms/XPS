@@ -22,16 +22,16 @@ export class AppComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(e) {
     if (window.pageYOffset > 100) {
-      const element = document.getElementById("navbar-top");
+      var element = document.getElementById("navbar-top");
       if (element) {
         element.classList.remove("navbar-transparent");
         element.classList.add("bg-info");
       }
     } else {
-      const element = document.getElementById("navbar-top");
+      var element = document.getElementById("navbar-top");
       if (element) {
         element.classList.add("navbar-transparent");
-        element.classList.remove("bg-danger");
+        element.classList.remove("bg-info");
       }
     }
   }
