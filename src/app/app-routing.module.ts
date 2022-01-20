@@ -4,16 +4,23 @@ import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 
 import { IndexComponent } from "./pages/index/index.component";
-import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
+// import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
+// import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
+// import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
 
 const routes: Routes = [
+
+  {
+    path:'auth',
+    pathMatch: "full",
+    loadChildren: './auth/auth.module#AuthModule'
+  },
+
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: IndexComponent },
-  { path: "profile", component: ProfilepageComponent },
-  { path: "register", component: RegisterpageComponent },
-  { path: "landing", component: LandingpageComponent }
+  // { path: "profile", component: ProfilepageComponent },
+  // { path: "register", component: RegisterpageComponent },
+  // { path: "landing", component: LandingpageComponent }
 ];
 
 @NgModule({

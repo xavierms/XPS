@@ -1,0 +1,263 @@
+
+  <nav
+  class="navbar navbar-expand-lg fixed-top navbar-transparent"
+  color-on-scroll="100"
+  id="navbar-top"
+>
+  <div class="container">
+    <div class="navbar-translate">
+      <a
+        class="navbar-brand"
+        placement="bottom"
+        [routerLink]="['/home']"
+        target="_blank"
+        tooltip="Diseñado para registrar casos de XPS"
+      >
+        <span> XPS• </span> X P Solutions
+      </a>
+      <button
+        aria-controls="navigation-index"
+        aria-label="Toggle navigation"
+        class="navbar-toggler navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed"
+        (click)="isCollapsed = !isCollapsed"
+        id="navigation"
+        type="button"
+      >
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+    </div>
+    <div
+      class="navbar-collapse justify-content-end"
+      [collapse]="isCollapsed"
+      id="navigation"
+    >
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:void(0)"> Register Casos </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)"> Profile </a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)"> Settings </a>
+      </li> -->
+    </ul>
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand"><a> XPS• </a></div>
+          <div class="col-6 collapse-close text-right">
+            <button
+              aria-controls="navigation-index"
+              aria-label="Toggle navigation"
+              class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed"
+              (click)="isCollapsed = !isCollapsed"
+              id="navigation"
+              type="button"
+            >
+              <i class="tim-icons icon-simple-remove"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    <!-- Mi logo -->
+    </div>
+  </div>
+</nav>
+<div class="wrapper">
+  <div class="page-header header-filter">
+    <div class="squares square1"></div>
+    <div class="squares square2"></div>
+    <div class="squares square3"></div>
+    <div class="squares square4"></div>
+    <div class="squares square5"></div>
+    <div class="squares square6"></div>
+    <div class="squares square7"></div>
+    <div class="container">
+      <div class="content-center brand">
+        <!-- <h1 class="h1-seo">XPS•</h1>
+        <h3>
+          X P Solutions | Registro de casos
+        </h3> -->
+      <table class="table table-hover" *ngFor="let listCasos of casos">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Phone</th>
+            <th scope="col">purpose</th>
+            <th scope="col">observation</th>
+            <th scope="col">User</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{listCasos.registro_Caso_Numero}}</th>
+            <td>{{listCasos.registro_Caso_Nombre}}</td>
+            <td>{{listCasos.registro_Caso_Apellido}}</td>
+            <td>{{listCasos.registro_Caso_Telefono}}</td>
+            <td>{{listCasos.registro_Caso_Motivo}}</td>
+            <td>{{listCasos.registro_Caso_Comentario}}</td>
+            <td>{{listCasos.usuario_Nickname}}</td>
+    
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+  </div>
+  <div class="main">    
+  <!--  <div class="section section-pagination">
+     <img class="path" src="assets/img/path4.png" />
+      <img class="path path1" src="assets/img/path5.png" /> 
+      <div class="container">
+        <div class="row">        
+           <div class="col-md-6">
+            <h3 class="mb-5">Pagination</h3>
+             <pagination
+              class="pagination-danger"
+              [(ngModel)]="pagination1"
+              [totalItems]="30"
+            >
+            </pagination> 
+           - <pagination
+              class="pagination-danger"
+              [boundaryLinks]="true"
+              [totalItems]="45"
+              [ngModel]="pagination"
+              previousText="&lsaquo;"
+              nextText="&rsaquo;"
+              firstText="&laquo;"
+              lastText="&raquo;"
+            >
+            </pagination> 
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>-->
+
+
+
+
+
+   
+
+    
+    <!-- <div class="section section-signup">
+      <div class="container">
+        <div class="squares square-1"></div>
+        <div class="squares square-2"></div>
+        <div class="squares square-3"></div>
+        <div class="squares square-4"></div>
+        <div class="row row-grid justify-content-between align-items-center">
+          <div class="col-lg-6">
+            <h3 class="display-3 text-white">
+              A beautiful Black Design
+              <span class="text-white"> completed with examples </span>
+            </h3>
+            <p class="text-white mb-3">
+              The Design System comes with four pre-built pages to help you get
+              started faster. You can change the text and images and you're good
+              to go. More importantly, looking at them will give you a picture
+              of what you can built with this powerful Bootstrap 4 Design
+              System.
+            </p>
+            <div class="btn-wrapper">
+              <a class="btn btn-danger" [routerLink]="['/register']">
+                Register Page
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><h1 class="title">XPS•</h1></div>
+        <div class="col-md-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/home']"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/landing']"> Landing </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/register']"> Register </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/profile']"> Profile </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://creative-tim.com/contact-us?ref=blkdsa-footer">
+                Contact Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://creative-tim.com/about-us?ref=blkdsa-footer">
+                About Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://creative-tim.com/blog?ref=blkdsa-footer">
+                Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://opensource.org/licenses/MIT">
+                License
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3 class="title">Follow us:</h3>
+          <div class="btn-wrapper profile">
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+              href="https://twitter.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-twitter"> </i>
+            </a>
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+              href="https://www.facebook.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-square"> </i>
+            </a>
+            <a
+              class="btn btn-icon btn-neutral btn-round btn-simple"
+              href="https://dribbble.com/creativetim"
+              target="_blank"
+            >
+              <i class="fab fa-dribbble"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+

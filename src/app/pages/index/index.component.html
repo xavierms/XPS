@@ -33,6 +33,17 @@
       [collapse]="isCollapsed"
       id="navigation"
     >
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:void(0)"> Register Casos </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)"> Profile </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/List']"> List casos </a>
+      </li>
+    </ul>
       <div class="navbar-collapse-header">
         <div class="row">
           <div class="col-6 collapse-brand"><a> XPS• </a></div>
@@ -71,9 +82,14 @@
           X P Solutions | Registro de casos
         </h3>
       </div>
+      
+
     </div>
+
   </div>
   <div class="main">
+
+
     <!-- basic elements -->
     <div class="section section-navbars">
       <img class="path" src="assets/img/path3.png" />

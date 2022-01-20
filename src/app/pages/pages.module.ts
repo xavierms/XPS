@@ -21,6 +21,8 @@ import { IndexComponent } from "./index/index.component";
 import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
+import { ListCasosComponent } from './list-casos/list-casos.component';
+import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   imports: [
@@ -28,6 +30,7 @@ import { LandingpageComponent } from "./examples/landingpage/landingpage.compone
     BrowserModule,
     FormsModule,
     RouterModule,
+    PagesRoutingModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
     TooltipModule.forRoot(),
@@ -45,7 +48,8 @@ import { LandingpageComponent } from "./examples/landingpage/landingpage.compone
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    ListCasosComponent
   ],
   exports: [
     IndexComponent,
