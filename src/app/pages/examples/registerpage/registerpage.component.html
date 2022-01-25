@@ -88,7 +88,7 @@
           </a>
         </li>-->
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/home']"> Back to Kit </a>
+          <a class="nav-link" [routerLink]="['/home']"> Back to Home </a>
         </li>
         <!-- <li class="nav-item">
           <a
@@ -122,8 +122,7 @@
                 <h4 class="card-title ml-2">Register</h4>
               </div>
               <div class="card-body">
-                <form [formGroup]="formPostUser"
-                      (ngSubmit)="createUser()" >
+                <form [formGroup]="formPostUser">
                       <!-- NickName -->
                   <div
                     class="input-group"
@@ -195,7 +194,7 @@
                       class="form-control"
                       placeholder="Email"
                       formControlName="Usuario_Email"
-                      type="text"
+                      type="email"
                       (focus)="focus3 = true"
                       (blur)="focus3 = false"
                     />
@@ -214,11 +213,29 @@
                       class="form-control"
                       placeholder="Password"
                       formControlName="Usuario_Password"
-                      type="text"
+                      type="password"
                       (focus)="focus4 = true"
                       (blur)="focus4 = false"
                     />
                   </div>
+                  <!-- confirmar password -->
+                  <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus5 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="tim-icons icon-lock-circle"> </i>
+                    </div>
+                  </div>
+                  <input
+                    class="form-control"
+                    placeholder="Confirm Password"
+                    type="password"
+                    (focus)="focus5 = true"
+                    (blur)="focus5 = false"
+                  />
+                </div>
                   <div class="form-check text-left">
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" />
@@ -230,10 +247,13 @@
                   <div class="card-footer">
                     <span>Value</span>
                     <pre> {{ formPostUser.value | json }}</pre>
-                   
+                    <span>Value</span>
+                    <pre> {{ formPostUser.controls.value | json }}</pre>
                     <button
                       type="submit"
-                      class="btn btn-danger btn-round btn-lg">
+                      class="btn btn-danger btn-round btn-lg"
+                      (click)="createUser()"
+                      >
                       Get Started
                     </button>
                   </div>

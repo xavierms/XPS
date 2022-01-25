@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from "src/interfaces/user.interface";
 import { XpsService } from '../../xps.service';
 
 
@@ -14,6 +15,7 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   focus2;
   focus3;
   focus4;
+  focus5;
 
   constructor(private FormBuilder: FormBuilder,
               private XpsService: XpsService  ) {}
@@ -80,32 +82,54 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
       posY * -0.02 +
       "deg)";
   }
+  ngOnInit() {
+   // this.readUser()
+    var body = document.getElementsByTagName("body")[0];
+    body.classList.add("register-page");
+ 
+    this.onMouseMove(event);
+  }
 
   formPostUser: FormGroup = this.FormBuilder.group({
-    Usuario_Nickname  : ['',[Validators.required]],
-    Usuario_Nombre    : ['',[Validators.required]],
-    Usuario_Apellido  : ['',[Validators.required]], 
-    Usuario_Email     : ['',[Validators.required]],
-    Usuario_Password  : ['',[Validators.required, Validators.min(8)]],
+    Usuario_Nickname  : ['user1',[Validators.required]],
+    Usuario_Nombre    : ['username',[Validators.required]],
+    Usuario_Apellido  : ['lastnameuser',[Validators.required]], 
+    Usuario_Email     : ['s@m',[Validators.required]],
+    Usuario_Password  : ['1234',[Validators.required, Validators.min(8)]],
     Usuario_Rol_Numero: [1,[Validators.required]]
   })
 
   createUser(){
-    
- this.XpsService.postXPSUser(this.formPostUser.controls.value)
+    //debugger
+    console.log('values controls form',this.formPostUser);
+    if (this.formPostUser.valid) {
+      
+    let users: User = {
+      Usuario_Nickname: this.formPostUser.get("Usuario_Nickname")?.value,
+      Usuario_Nombre: this.formPostUser.get("Usuario_Nombre")?.value,
+      Usuario_Apellido: this.formPostUser.get("Usuario_Apellido")?.value,
+      Usuario_Email: this.formPostUser.get("Usuario_Email")?.value,
+      Usuario_Password: this.formPostUser.get("Usuario_Password")?.value,
+      Usuario_Rol_Numero: 1
+    }
+ this.XpsService.postXPSUser(users)
                 .subscribe( () => {
                   console.log('user added!');
+                  console.log('values controls form',this.formPostUser.controls.value);
                   
                 } )
+    }
+
+  }
+
+  readUser(){
+    this.XpsService.getXPSUser().subscribe(res=>{
+      console.log(res);
+      
+    })
   }
 
 
-  ngOnInit() {
-    var body = document.getElementsByTagName("body")[0];
-    body.classList.add("register-page");
-
-    this.onMouseMove(event);
-  }
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("register-page");

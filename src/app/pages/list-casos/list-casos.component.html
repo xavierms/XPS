@@ -85,7 +85,7 @@
         <h3>
           X P Solutions | Registro de casos
         </h3> -->
-      <table class="table table-hover" *ngFor="let listCasos of casos">
+      <table class="table table-hover" >
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -99,7 +99,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let listCasos of casos">
             <th scope="row">{{listCasos.registro_Caso_Numero}}</th>
             <td>{{listCasos.registro_Caso_Nombre}}</td>
             <td>{{listCasos.registro_Caso_Apellido}}</td>

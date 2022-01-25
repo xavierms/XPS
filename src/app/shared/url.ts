@@ -4,8 +4,12 @@ let Api = environment.apiXPS;
 
 export let APIURL = {
     Casos:{
-        READ:   Api + 'XPSCaso/ReadCaso?',
-        CREATE: Api + 'Usuarios/CreateUsuarios'
+        READ  : Api + 'XPSCaso/ReadCaso?',
+        CREATE: Api + 'XPSCaso/CreateCaso?'
+    },
+    Users:{
+        READ  : Api + 'Usuarios/ReadUsuario',
+        CREATE: Api + 'Usuarios/CreateUsuarios?'      
     }
 }
 

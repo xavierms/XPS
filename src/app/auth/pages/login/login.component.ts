@@ -12,6 +12,13 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
               private AuthService: AuthService) { }
+              // focus1;
+              // focus2;
+              // focus3;
+              // focus4;
+              // focus5;
+
+
 
   ngOnInit(): void {
   }
