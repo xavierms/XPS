@@ -3,8 +3,9 @@ export let SERVER = environment.servername;
 let Api = environment.apiXPS;
 
 export let APIURL = {
-    Register:{
-        READ: Api + 'XPSCaso/ReadCaso?'
+    Casos:{
+        READ:   Api + 'XPSCaso/ReadCaso?',
+        CREATE: Api + 'Usuarios/CreateUsuarios'
     }
 }
 

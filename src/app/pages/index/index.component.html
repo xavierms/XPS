@@ -41,7 +41,12 @@
         <a class="nav-link" [routerLink]="['/Register']"> Register </a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/auth/login"><i class="fas fa-sign-in-alt"></i> Login </a>
+        <a class="nav-link" 
+          routerLink=""
+          data-target="#myModal2"
+          (click)="myModal2.show()">
+          <i class="fas fa-sign-in-alt"></i> 
+          Login </a>
       </li>
     </ul>
       <div class="navbar-collapse-header">
@@ -91,12 +96,12 @@
 
 
     <!-- basic elements -->
-    <div class="section section-navbars">
+    <!-- <div class="section section-navbars">
       <img class="path" src="assets/img/path3.png" />
 
       <div class="container" id="menu-dropdown">
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row"> -->
+          <!-- <div class="col-md-6">
             <h4>Menu</h4>
             <nav class="navbar navbar-expand-lg bg-primary">
               <div class="container">
@@ -163,8 +168,8 @@
                 </div>
               </div>
             </nav>
-          </div>
-          <div class="col-md-6">
+          </div> -->
+          <!-- <div class="col-md-6">
             <h4>Menu with Icons</h4>
             <nav class="navbar navbar-expand-lg bg-info">
               <div class="container">
@@ -243,11 +248,11 @@
                 </div>
               </div>
             </nav>
-          </div>
-        </div>
-        <h3 class="title mb-3">Navigation</h3>
-      </div>
-      <div id="navbar">
+          </div> -->
+        <!-- </div> -->
+        <!-- <h3 class="title mb-3">Navigation</h3> -->
+      <!-- </div> -->
+      <!-- <div id="navbar">
         <div class="navigation-example">
           <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container">
@@ -283,6 +288,11 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" [routerLink]="['/Login']">
+                      <i class="tim-icons icon-single-02"> </i> Login
+                    </a>
+                  </li>    
+                   <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/landing']">
                       <i class="tim-icons icon-single-02"> </i> Login
                     </a>
                   </li>
@@ -525,9 +535,9 @@
             </div>
           </nav>
         </div>
-      </div>
-    </div>
-    <div class="section section-tabs">
+      </div> -->
+    <!-- </div> -->
+    <!-- <div class="section section-tabs">
       <div class="container">
         <div class="title"><h3 class="mb-3">Navigation Tabs</h3></div>
         <div class="row">
@@ -638,8 +648,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="section section-pagination">
+    </div> -->
+    <!-- <div class="section section-pagination">
       <img class="path" src="assets/img/path4.png" />
 
       <img class="path path1" src="assets/img/path5.png" />
@@ -714,9 +724,9 @@
         </div>
         <br />
       </div>
-    </div>
-    <div class="section section-notifications" id="notifications">
-      <div class="container">
+    </div> -->
+    <!-- <div class="section section-notifications" id="notifications"> -->
+      <!-- <div class="container">
         <div class="space"></div>
         <h3>Notifications</h3>
         <alert
@@ -774,14 +784,14 @@
             ".alert-danger"
           </span>
         </alert>
-      </div>
-    </div>
-    <div class="section section-typo">
+      </div> -->
+    <!-- </div> -->
+    <!-- <div class="section section-typo">
       <img class="path" src="assets/img/path1.png" />
 
-      <img class="path path1" src="assets/img/path3.png" />
+      <img class="path path1" src="assets/img/path3.png" /> -->
 
-      <div class="container">
+      <!-- <div class="container">
         <h3 class="title">Typography</h3>
         <div id="typography">
           <div class="row">
@@ -931,9 +941,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section section-javascript" id="javascriptComponents">
+      </div> -->
+    <!-- </div> -->
+    <!-- <div class="section section-javascript" id="javascriptComponents">
       <img class="path" src="assets/img/path5.png" />
 
       <img class="path path1" src="assets/img/path5.png" />
@@ -950,16 +960,17 @@
             >
               Launch Modal
             </button>
-          </div>
-          <div class="col-md-4">
+          </div>-->
+           <div class="col-md-4">
             <button
               class="btn btn-warning"
-              data-target="#myModal1"
-              (click)="myModal1.show()"
-            >
+              data-target="#myModal2"
+              (click)="myModal2.show()"
+            > 
               Launch Modal Mini
             </button>
           </div>
+          <!-- 
           <div class="col-md-4">
             <button
               class="btn btn-success"
@@ -1133,11 +1144,11 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="section section-nucleo-icons">
-      <img class="path" src="assets/img/path3.png" />
+    </div> -->
+    <!-- <div class="section section-nucleo-icons">
+      <img class="path" src="assets/img/path3.png" /> -->
 
-      <div class="container">
+      <!-- <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-12">
             <h2 class="title">Nucleo Icons</h2>
@@ -1191,9 +1202,9 @@
             </span>
           </a>
         </div>
-      </div>
-    </div>
-    <div class="section section-signup">
+      </div> -->
+    <!-- </div> -->
+    <!-- <div class="section section-signup">
       <div class="container">
         <div class="squares square-1"></div>
         <div class="squares square-2"></div>
@@ -1289,14 +1300,13 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="section section-examples" data-background-color="black">
       <img class="path" src="assets/img/path1.png" />
 
-      <div class="space-50"></div>
       <div class="container text-center">
         <div class="row">
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <a [routerLink]="['/landing']">
               <img
                 alt="Image"
@@ -1310,7 +1320,7 @@
             >
               View Landing Page
             </a>
-          </div>
+          </div> -->
           <div class="col-sm-6">
             <a [routerLink]="['/profile']">
               <img
@@ -1329,7 +1339,7 @@
         </div>
       </div>
     </div>
-    <div class="section section-download" data-background-color="black" #target>
+    <!-- <div class="section section-download" data-background-color="black" #target>
       <img class="path" src="assets/img/path1.png" />
 
       <div class="container">
@@ -1364,7 +1374,8 @@
         <br />
 
         <br />
-
+        <!-- Modals -->
+        <!-- 
         <div class="row row-grid align-items-center my-md">
           <div class="col-lg-6">
             <h3 class="text-danger font-weight-light mb-2">
@@ -1397,7 +1408,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
@@ -1447,6 +1458,8 @@
         </div>
       </div>
     </div>
+    <!-- modal1 -->
+
     <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
@@ -1490,6 +1503,7 @@
         </div>
       </div>
     </div>
+    <!-- modal2 -->
     <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
@@ -1513,11 +1527,11 @@
               <i class="tim-icons icon-simple-remove text-white"> </i>
             </button>
             <div class="text-muted text-center ml-auto mr-auto">
-              <h3 class="mb-0">Sign in with</h3>
+              <h3 class="mb-0">Sign in </h3>
             </div>
           </div>
           <div class="modal-body">
-            <div class="btn-wrapper text-center">
+            <!-- <div class="btn-wrapper text-center">
               <a
                 class="btn btn-neutral btn-icon mr-1"
                 href="javascript:void(0)"
@@ -1527,10 +1541,10 @@
               <a class="btn btn-neutral btn-icon" href="javascript:void(0)">
                 <img src="assets/img/google.svg" />
               </a>
-            </div>
-            <div class="text-center text-muted mb-4 mt-3">
+            </div> -->
+            <!-- <div class="text-center text-muted mb-4 mt-3">
               <small> Or sign in with credentials </small>
-            </div>
+            </div> -->
             <form role="form">
               <div class="form-group mb-3">
                 <div
@@ -1572,12 +1586,12 @@
               </div>
               <div class="form-check mt-3">
                 <label class="form-check-label">
-                  <input
-                    checked="checked"
+                    
+                    <input   
                     class="form-check-input"
                     type="checkbox"
                   />
-
+                  <!--checked="checked" -->
                   <span class="form-check-sign"> </span> Remember me!
                 </label>
               </div>

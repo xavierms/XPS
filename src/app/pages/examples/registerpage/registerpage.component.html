@@ -9,7 +9,7 @@
         class="navbar-brand"
         [routerLink]="['/home']"
         placement="bottom"
-        tooltip="Designed and Coded by Creative Tim"
+        tooltip="Designed and Coded by Xavier"
       >
         <span> BLK• </span> Design by Xavier
       </a>
@@ -122,27 +122,69 @@
                 <h4 class="card-title ml-2">Register</h4>
               </div>
               <div class="card-body">
-                <form class="form">
+                <form [formGroup]="formPostUser"
+                      (ngSubmit)="createUser()" >
+                      <!-- NickName -->
                   <div
                     class="input-group"
                     [ngClass]="{ 'input-group-focus': focus === true }"
                   >
                     <div class="input-group-prepend">
                       <div class="input-group-text">
-                        <i class="tim-icons icon-single-02"> </i>
+                        <i class="tim-icons icon-satisfied"> </i>
                       </div>
                     </div>
                     <input
                       class="form-control"
-                      placeholder="Full Name"
+                      placeholder="Nick Name"
                       type="text"
+                      formControlName="Usuario_Nickname"
                       (focus)="focus = true"
                       (blur)="focus = false"
                     />
                   </div>
+                  <!-- Name -->
+                  <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus1 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <i class="tim-icons icon-single-02"> </i>
+                    </div>
+                  </div>
+                  <input
+                    class="form-control"
+                    placeholder="Name"
+                    type="text"
+                    formControlName="Usuario_Nombre"
+                    (focus)="focus1 = true"
+                    (blur)="focus1 = false"
+                  />
+                </div>
+                <!-- LastName -->
+                <div
+                class="input-group"
+                [ngClass]="{ 'input-group-focus': focus2 === true }"
+              >
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tim-icons icon-single-02"> </i>
+                  </div>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Last Name"
+                  type="text"
+                  formControlName="Usuario_Apellido"
+                  (focus)="focus2 = true"
+                  (blur)="focus2 = false"
+                />
+              </div>
+              <!-- Email -->
                   <div
                     class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus1 === true }"
+                    [ngClass]="{ 'input-group-focus': focus3 === true }"
                   >
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -152,14 +194,16 @@
                     <input
                       class="form-control"
                       placeholder="Email"
+                      formControlName="Usuario_Email"
                       type="text"
-                      (focus)="focus1 = true"
-                      (blur)="focus1 = false"
+                      (focus)="focus3 = true"
+                      (blur)="focus3 = false"
                     />
                   </div>
+                  <!-- password -->
                   <div
                     class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus2 === true }"
+                    [ngClass]="{ 'input-group-focus': focus4 === true }"
                   >
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -169,9 +213,10 @@
                     <input
                       class="form-control"
                       placeholder="Password"
+                      formControlName="Usuario_Password"
                       type="text"
-                      (focus)="focus2 = true"
-                      (blur)="focus2 = false"
+                      (focus)="focus4 = true"
+                      (blur)="focus4 = false"
                     />
                   </div>
                   <div class="form-check text-left">
@@ -182,15 +227,17 @@
                       <a href="javascript:void(0)"> terms and conditions </a> .
                     </label>
                   </div>
+                  <div class="card-footer">
+                    <span>Value</span>
+                    <pre> {{ formPostUser.value | json }}</pre>
+                   
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-round btn-lg">
+                      Get Started
+                    </button>
+                  </div>
                 </form>
-              </div>
-              <div class="card-footer">
-                <a
-                  class="btn btn-danger btn-round btn-lg"
-                  href="javascript:void(0)"
-                >
-                  Get Started
-                </a>
               </div>
             </div>
           </div>
