@@ -34,14 +34,14 @@
       id="navigation"
     >
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="javascript:void(0)"> Register Casos </a>
-      </li>
+      <!-- <li class="nav-item active">
+        <a class="nav-link" routerLink="/profile"> profile </a>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)"> Profile </a>
-      </li>
+        <a class="nav-link" [routerLink]="['/Register']"> Register </a>
+      </li> 
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/List']"> List casos </a>
+        <a class="nav-link" routerLink="/auth/login"><i class="fas fa-sign-in-alt"></i> Login </a>
       </li>
     </ul>
       <div class="navbar-collapse-header">
@@ -282,8 +282,8 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">
-                      <i class="tim-icons icon-single-02"> </i> Profile
+                    <a class="nav-link" [routerLink]="['/Login']">
+                      <i class="tim-icons icon-single-02"> </i> Login
                     </a>
                   </li>
                   <li class="nav-item">

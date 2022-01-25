@@ -12,12 +12,15 @@ const routes: Routes = [
 
   {
     path:'auth',
-    pathMatch: "full",
-    loadChildren: './auth/auth.module#AuthModule'
-  },
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
 
-  { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: IndexComponent },
+  },
+  { path: "", 
+    redirectTo: "home", 
+    pathMatch: "full" 
+  },
+  { path: "home", 
+    component: IndexComponent },
   // { path: "profile", component: ProfilepageComponent },
   // { path: "register", component: RegisterpageComponent },
   // { path: "landing", component: LandingpageComponent }
@@ -28,7 +31,7 @@ const routes: Routes = [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes, {
-      useHash: true
+       useHash: true  //HashLocationStrategy #
     })
   ],
   exports: []

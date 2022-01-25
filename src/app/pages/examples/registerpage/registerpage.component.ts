@@ -21,8 +21,8 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
     var squares7 = document.getElementById("square7");
     var squares8 = document.getElementById("square8");
 
-    var posX = e.clientX - window.innerWidth / 2;
-    var posY = e.clientY - window.innerWidth / 6;
+    var posX = e?.clientX - window.innerWidth / 2;
+    var posY = e?.clientY - window.innerWidth / 6;
 
     squares1.style.transform =
       "perspective(500px) rotateY(" +

@@ -35,11 +35,14 @@
       id="navigation"
     >
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']"> Home </a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="javascript:void(0)"> Register Casos </a>
+        <a class="nav-link" [routerLink]="['/Register']"> Register Casos </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)"> Profile </a>
+        <a class="nav-link"    > Logout </a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="javascript:void(0)"> Settings </a>
@@ -195,15 +198,15 @@
             <li class="nav-item">
               <a class="nav-link" [routerLink]="['/home']"> Home </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" [routerLink]="['/landing']"> Landing </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" [routerLink]="['/register']"> Register </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" [routerLink]="['/profile']"> Profile </a>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="col-md-3">
