@@ -38,11 +38,14 @@ export class XpsService {
   }
 
   // Users
-  postXPSUser(User: User) {
-    return this.http.post(APIURL.Users.CREATE, User);
+  postXPSUser(User: User): Observable<any> {
+    console.log(User);
+    
+    return this.http.post<any>(APIURL.Users.CREATE , User ,{responseType: 'json'});
+    // return this.http.post(`${APIURL.Users.CREATE}${User}`, {responseType: 'json'});
   }
 
   getXPSUser() {
-    return this.http.get<User[]>(APIURL.Users.READ);
+    return this.http.get(APIURL.Users.READ);
   }
 }

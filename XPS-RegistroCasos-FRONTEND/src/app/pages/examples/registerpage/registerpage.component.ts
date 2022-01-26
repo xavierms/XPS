@@ -16,7 +16,7 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   focus3;
   focus4;
   focus5;
-
+  user: User[]=[];
   constructor(private FormBuilder: FormBuilder,
               private XpsService: XpsService  ) {}
   @HostListener("document:mousemove", ["$event"])
@@ -86,8 +86,9 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
    // this.readUser()
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("register-page");
- 
+    this.readUser();
     this.onMouseMove(event);
+    
   }
 
   formPostUser: FormGroup = this.FormBuilder.group({
@@ -100,7 +101,9 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   })
 
   createUser(){
-    //debugger
+    // debugger
+    console.log(this.user);
+
     console.log('values controls form',this.formPostUser);
     if (this.formPostUser.valid) {
       
@@ -110,10 +113,13 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
       Usuario_Apellido: this.formPostUser.get("Usuario_Apellido")?.value,
       Usuario_Email: this.formPostUser.get("Usuario_Email")?.value,
       Usuario_Password: this.formPostUser.get("Usuario_Password")?.value,
-      Usuario_Rol_Numero: 1
+      Usuario_Rol_Numero:  this.formPostUser.get("Usuario_Rol_Numero")?.value
     }
+    console.log(this.user);
+
  this.XpsService.postXPSUser(users)
-                .subscribe( () => {
+                .subscribe( rsp => {
+                   this.user = rsp; 
                   console.log('user added!');
                   console.log('values controls form',this.formPostUser.controls.value);
                   
