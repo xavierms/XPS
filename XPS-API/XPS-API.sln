@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPS-API", "XPS-API\XPS-API.csproj", "{94AC8693-9E90-4C2D-A024-DEBBBF41AE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreX", "CoreX\CoreX.csproj", "{B30023C4-3EC2-4BB9-A552-F69DED94A7EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94AC8693-9E90-4C2D-A024-DEBBBF41AE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AC8693-9E90-4C2D-A024-DEBBBF41AE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AC8693-9E90-4C2D-A024-DEBBBF41AE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AC8693-9E90-4C2D-A024-DEBBBF41AE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30023C4-3EC2-4BB9-A552-F69DED94A7EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30023C4-3EC2-4BB9-A552-F69DED94A7EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30023C4-3EC2-4BB9-A552-F69DED94A7EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30023C4-3EC2-4BB9-A552-F69DED94A7EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C265976-1558-4277-AF6A-A941422DE212}
+	EndGlobalSection
+EndGlobal
