@@ -11,7 +11,7 @@
         placement="bottom"
         [routerLink]="['/home']"
         target="_blank"
-        tooltip="Diseñado para registrar casos de XPS"
+        tooltip="Disign for register cases of XPS"
       >
         <span> XPS• </span> X P Solutions
       </a>
@@ -39,7 +39,7 @@
         <a class="nav-link" [routerLink]="['/home']"> Home </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/Register']"> Register Casos </a>
+        <a class="nav-link" [routerLink]="['/Register']"> Register cases </a>
       </li>
       <li class="nav-item">
         <a class="nav-link"    > Logout </a>
@@ -79,13 +79,13 @@
     <div class="squares square5"></div>
     <div class="squares square6"></div>
     <div class="squares square7"></div>
-    <div class="container">
-      <div class="content-center brand">
-        <!-- <h1 class="h1-seo">XPS•</h1>
+    <div class="container col-10">
+      <div class="content-center ">
+        <!-- <h1 class="h1-seo">XPS•</h1> -->
         <h3>
-          X P Solutions | Registro de casos
-        </h3> -->
-      <table class="table table-hover" >
+          X P Solutions | List of cases
+        </h3>
+      <table class="table table-hover table-bordered " >
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -95,27 +95,31 @@
             <th scope="col">purpose</th>
             <th scope="col">observation</th>
             <th scope="col">User</th>
+            <th scope="col">DOC</th>
     
           </tr>
         </thead>
-        <tbody>
-          <tr *ngFor="let listCasos of casos">
+        <tbody >
+          <tr class="table-active" *ngFor="let listCasos of casos">
             <th scope="row">{{listCasos.registro_Caso_Numero}}</th>
             <td>{{listCasos.registro_Caso_Nombre}}</td>
             <td>{{listCasos.registro_Caso_Apellido}}</td>
             <td>{{listCasos.registro_Caso_Telefono}}</td>
             <td>{{listCasos.registro_Caso_Motivo}}</td>
             <td>{{listCasos.registro_Caso_Comentario}}</td>
-            <td>{{listCasos.usuario_Nickname}}</td>
-    
+            <td>{{listCasos.usuario_Nickname}}</td> 
+            <td>{{listCasos.Registro_Documento_Ruta}}</td> 
+            <td (click)="download(listCasos)"><i class="fas fa-download"></i> Descargar documento </td>
+            
           </tr>
          
         </tbody>
       </table>
     </div>
     </div>
-
   </div>
+
+  
   <div class="main">    
   <!--  <div class="section section-pagination">
      <img class="path" src="assets/img/path4.png" />

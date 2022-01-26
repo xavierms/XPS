@@ -26,6 +26,16 @@ export class XpsService {
   postXPSCasos(Casos: Casos) {
     return this.http.post(APIURL.Casos.CREATE, Casos);
   }
+  getFile(fileName: string):Observable<any>{
+
+    return this.http.get(APIURL.Casos.FILE + fileName,{
+      responseType:"blob" as "json",
+    });
+  }
+  postDoc(data: FormData){
+
+    return this.http.post(APIURL.Casos.INSERTFILE, data);
+  }
 
   // Users
   postXPSUser(User: User) {

@@ -74,6 +74,7 @@
     "@angular/router": "11.0.5",
     "chart.js": "2.9.4",
     "core-js": "3.8.2",
+    "file-saver": "^2.0.5",
     "jw-bootstrap-switch-ng2": "2.0.5",
     "ngx-bootstrap": "6.2.0",
     "nouislider": "14.6.3",

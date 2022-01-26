@@ -1,4 +1,5 @@
 export class User{
+    usuario_Numero?     : number;
     Usuario_Nickname   : string;
     Usuario_Nombre     : string;
     Usuario_Apellido   : string;

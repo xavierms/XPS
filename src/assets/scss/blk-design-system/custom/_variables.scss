@@ -501,7 +501,7 @@ $table-cell-padding-sm: 0.3rem !default;
 
 $table-bg: transparent !default;
 $table-accent-bg: rgba($black, 0.05);
-$table-hover-bg: rgba($black, 0.075);
+$table-hover-bg: rgba($black, 2); //cambios scssx
 $table-active-bg: $table-hover-bg !default;
 
 $table-border-width: $border-width !default;

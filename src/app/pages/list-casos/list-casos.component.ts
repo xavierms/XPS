@@ -14,7 +14,7 @@ export class ListCasosComponent implements OnInit {
   isCollapsed = true;
 
 casos:Casos[]=[];
-
+casosDoc: Casos[]=[];
 listXPS: any ={
   filtro: '',
   Pageindex:1,

@@ -10,7 +10,7 @@
         placement="bottom"
         [routerLink]="['/home']"
         target="_blank"
-        tooltip="Diseñado para registrar casos de XPS"
+        tooltip="Disign for register cases of XPS"
       >
         <span> XPS• </span> X P Solutions
       </a>
@@ -84,7 +84,7 @@
       <div class="content-center brand">
         <h1 class="h1-seo">XPS•</h1>
         <h3>
-          X P Solutions | Registro de casos
+          X P Solutions | Register of cases
         </h3>
       </div>
       
@@ -961,7 +961,7 @@
               Launch Modal
             </button>
           </div>-->
-           <div class="col-md-4">
+           <!-- <div class="col-md-4">
             <button
               class="btn btn-warning"
               data-target="#myModal2"
@@ -969,7 +969,7 @@
             > 
               Launch Modal Mini
             </button>
-          </div>
+          </div> -->
           <!-- 
           <div class="col-md-4">
             <button
@@ -1301,11 +1301,11 @@
         </div>
       </div>
     </div> -->
-    <div class="section section-examples" data-background-color="black">
+    <!-- <div class="section section-examples" data-background-color="black">
       <img class="path" src="assets/img/path1.png" />
 
       <div class="container text-center">
-        <div class="row">
+        <div class="row"> -->
           <!-- <div class="col-sm-6">
             <a [routerLink]="['/landing']">
               <img
@@ -1321,7 +1321,7 @@
               View Landing Page
             </a>
           </div> -->
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <a [routerLink]="['/profile']">
               <img
                 alt="Image"
@@ -1338,7 +1338,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="section section-download" data-background-color="black" #target>
       <img class="path" src="assets/img/path1.png" />
 
@@ -1409,7 +1409,7 @@
         </div>
       </div>
     </div> -->
-    <div
+    <!-- <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
       bsModal
@@ -1457,10 +1457,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- modal1 -->
 
-    <div
+    <!-- <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
       bsModal
@@ -1502,8 +1502,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- modal2 -->
+    </div> -->
+    <!-- modal2 login-->
     <div
       aria-hidden="true"
       aria-labelledby="myModalLabel"
@@ -1596,7 +1596,9 @@
                 </label>
               </div>
               <div class="text-center">
-                <button class="btn btn-primary my-4" type="button">
+                <button class="btn btn-primary my-4" 
+                         type="button"
+                         (click)="login()">
                   Sign in
                 </button>
               </div>

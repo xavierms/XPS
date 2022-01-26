@@ -31,9 +31,6 @@ get auth(): Auth{
                         return true;
                       })
                     );
-//
-  // return of(false);
-  // return of(true);
   }
 
   login(){

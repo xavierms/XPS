@@ -4,8 +4,10 @@ let Api = environment.apiXPS;
 
 export let APIURL = {
     Casos:{
+        FILE  : Api + 'XPSCaso/DescargarDocumento/',
+        CREATE: Api + 'XPSCaso/CreateCaso?',
         READ  : Api + 'XPSCaso/ReadCaso?',
-        CREATE: Api + 'XPSCaso/CreateCaso?'
+        INSERTFILE: Api + 'XPSCaso/'
     },
     Users:{
         READ  : Api + 'Usuarios/ReadUsuario',
