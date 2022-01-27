@@ -23,6 +23,7 @@ import { RegisterpageComponent } from "./examples/registerpage/registerpage.comp
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { ListCasosComponent } from './list-casos/list-casos.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { RegistroCasosComponent } from './registro-casos/registro-casos.component';
 
 @NgModule({
   imports: [
@@ -49,12 +50,14 @@ import { PagesRoutingModule } from './pages-routing.module';
     IndexComponent,
     ProfilepageComponent,
     RegisterpageComponent,
+    RegistroCasosComponent,
     LandingpageComponent,
     ListCasosComponent
   ],
   exports: [
     IndexComponent,
     ProfilepageComponent,
+    RegisterpageComponent,
     RegisterpageComponent,
     LandingpageComponent
   ],

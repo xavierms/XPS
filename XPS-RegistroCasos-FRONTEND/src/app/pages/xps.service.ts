@@ -45,7 +45,7 @@ export class XpsService {
     // return this.http.post(`${APIURL.Users.CREATE}${User}`, {responseType: 'json'});
   }
 
-  getXPSUser() {
-    return this.http.get(APIURL.Users.READ);
+  getXPSUser():Observable<User> {
+    return this.http.get<User>(APIURL.Users.READ);
   }
 }

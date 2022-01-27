@@ -41,13 +41,18 @@
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['/Register']"> Register cases </a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link"    > Logout </a>
+        <a class="nav-link" id="logout"  (click)="logout()"  > Logout </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"   >User:  {{ auth.usuario }}</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="javascript:void(0)"> Settings </a>
       </li> -->
     </ul>
+
       <div class="navbar-collapse-header">
         <div class="row">
           <div class="col-6 collapse-brand"><a> XPS• </a></div>
@@ -115,6 +120,19 @@
          
         </tbody>
       </table>
+      <div class="container col-5">        
+         <div class="">
+           <pagination
+            class="pagination-danger "
+            
+            [totalItems]="30"
+          >
+          </pagination> 
+        
+      <br />
+    </div>
+  </div>
+    
     </div>
     </div>
   </div>

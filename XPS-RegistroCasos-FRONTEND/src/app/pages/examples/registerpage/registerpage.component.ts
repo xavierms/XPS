@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {  Router } from '@angular/router';
+import { AuthService } from "src/app/auth/services/auth.service";
 import { User } from "src/interfaces/user.interface";
 import { XpsService } from '../../xps.service';
 
@@ -18,7 +20,9 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   focus5;
   user: User[]=[];
   constructor(private FormBuilder: FormBuilder,
-              private XpsService: XpsService  ) {}
+              private XpsService: XpsService,
+              private router:Router,
+              private AuthService: AuthService  ) {}
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -92,11 +96,11 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   }
 
   formPostUser: FormGroup = this.FormBuilder.group({
-    Usuario_Nickname  : ['user1',[Validators.required]],
-    Usuario_Nombre    : ['username',[Validators.required]],
-    Usuario_Apellido  : ['lastnameuser',[Validators.required]], 
-    Usuario_Email     : ['s@m',[Validators.required]],
-    Usuario_Password  : ['1234',[Validators.required, Validators.min(8)]],
+    Usuario_Nickname  : ['',[Validators.required]],
+    Usuario_Nombre    : ['',[Validators.required]],
+    Usuario_Apellido  : ['',[Validators.required]], 
+    Usuario_Email     : ['',[Validators.required]],
+    Usuario_Password  : ['',[Validators.required, Validators.min(8)]],
     Usuario_Rol_Numero: [1,[Validators.required]]
   })
 
@@ -119,7 +123,9 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
 
  this.XpsService.postXPSUser(users)
                 .subscribe( rsp => {
-                   this.user = rsp; 
+                  // this.user = rsp; 
+                
+                  this.router.navigateByUrl('/Register-casos')
                   console.log('user added!');
                   console.log('values controls form',this.formPostUser.controls.value);
                   
@@ -130,11 +136,28 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
 
   readUser(){
     this.XpsService.getXPSUser().subscribe(res=>{
+      const {Usuario_Email}= res;
+      console.log(Usuario_Email);
       console.log(res);
       
     })
   }
+  login(){
 
+    this.AuthService.login()
+    .subscribe(resp=>{
+      console.log(resp);
+      
+      if(resp.id == 2){
+     
+        this.router.navigateByUrl('./List');
+      }
+      else{
+        this.router.navigateByUrl('./Register-casos');
+
+    }
+    })
+     }
 
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];

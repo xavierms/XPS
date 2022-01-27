@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'landing',
     component: LandingpageComponent
-  }
+  },
+  {
+    path: 'Register-casos',
+    component: RegistroCasosComponent
+  },
 ];
 
 @NgModule({

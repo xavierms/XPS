@@ -24,7 +24,7 @@ get auth(): Auth{
       return of(false);
     }
 
-    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/1`)
+    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/${"luis1"}`)
                     .pipe(
                       map( auth=>{
                         this._auth= auth;
@@ -34,10 +34,10 @@ get auth(): Auth{
   }
 
   login(){
-    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/1`)
+    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/${"luis1"}`)
     .pipe(
       tap( auth=> this._auth = auth ),
-      tap( auth=> localStorage.setItem('token', auth.id))
+      tap( auth=> localStorage.setItem('token', auth.id.toString()))
     )
   }
 
