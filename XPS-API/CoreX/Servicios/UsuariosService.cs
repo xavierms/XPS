@@ -63,6 +63,7 @@ namespace CoreX.Servicios
                             Usuario_Nickname   = dr["Usuario_Nickname"].ToString(),
                             Usuario_Nombre     = dr["Usuario_Nombre"].ToString(),
                             Usuario_Apellido   = dr["Usuario_Apellido"].ToString(),
+                            Usuario_Password   = dr["Usuario_Password"].ToString(),
                             Usuario_Email      = dr["Usuario_Email"].ToString(),
                             Usuario_Rol_Numero = Convert.ToInt32(dr["Usuario_Rol_Numero"])
                         };
