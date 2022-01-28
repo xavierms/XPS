@@ -48,6 +48,7 @@
           <i class="fas fa-sign-in-alt"></i> 
           Login </a>
       </li>
+      
     </ul>
       <div class="navbar-collapse-header">
         <div class="row">
@@ -1604,16 +1605,39 @@
               </div>
               <br>
               <p >
-              <a  style="text-decoration: underline;" [routerLink]="['/Register']"> Create an account </a>&nbsp;
-               to use XPS for free!
+              <!-- <a  style="text-decoration: underline;" [routerLink]="['/Register']"> Create an account </a>&nbsp;
+               to use XPS for free! -->
               </p> 
-              <div class="text-center">
+                  <div class=" text-center">
+          <a
+            class="btn btn-danger btn-round btn-lg btn-block"
+            (click)="login()"
+          >
+          Sign in
+          </a>
+        </div>
+        <div class="pull-left ml-3 mb-3">
+          <h6>
+            <a class="link footer-link text-danger"[routerLink]="['/Register']" href="javascript:void(0)">
+              Create Account 
+            </a>&nbsp;
+            to use XPS for free!
+          </h6>
+        </div>
+        <div class="pull-right mr-3 mb-3">
+          <h6>
+            <a class="link footer-link text-danger" href="javascript:void(0)">
+              Need Help?
+            </a>
+          </h6>
+        </div>
+              <!-- <div class="text-center">
                 <button class="btn btn-primary my-4" 
                          type="button"
                          (click)="login()">
                   Sign in
                 </button>
-              </div>
+              </div> -->
             </form>
           </div>
         </div>

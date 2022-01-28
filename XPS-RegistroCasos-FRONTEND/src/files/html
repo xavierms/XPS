@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="col-lg-5 col-md-8 mx-auto">
+    <div class="card card-login">
+      <form
+        action=""
+        class="form ng-untouched ng-pristine ng-valid"
+        method=""
+        novalidate=""
+      >
+        <div class="card-header">
+          <img
+            alt="Card image"
+            class="card-img"
+            src="assets/img/square1-red.png"
+          />
+          <h4 class="card-title">Login</h4>
+        </div>
+        <div class="card-body">
+          <div class="input-group input-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="tim-icons icon-single-02"></i
+              ></span>
+            </div>
+            <input
+              class="form-control"
+              placeholder="First Name..."
+              type="text"
+            />
+          </div>
+          <div class="input-group input-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="tim-icons icon-caps-small"></i
+              ></span>
+            </div>
+            <input
+              class="form-control"
+              placeholder="Last Name..."
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <a
+            class="btn btn-danger btn-round btn-lg btn-block"
+            href="javascript:void(0)"
+          >
+            Get Started
+          </a>
+        </div>
+        <div class="pull-left ml-3 mb-3">
+          <h6>
+            <a class="link footer-link text-danger" href="javascript:void(0)">
+              Create Account
+            </a>
+          </h6>
+        </div>
+        <div class="pull-right mr-3 mb-3">
+          <h6>
+            <a class="link footer-link text-danger" href="javascript:void(0)">
+              Need Help?
+            </a>
+          </h6>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

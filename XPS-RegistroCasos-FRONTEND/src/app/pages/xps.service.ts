@@ -15,7 +15,7 @@ export class XpsService {
   GetNameUserAuth(user: string){
    this.UserName=   user;
   console.log(user);
-
+  return user
   }
 
 
@@ -34,22 +34,17 @@ export class XpsService {
     return this.http.post(APIURL.Casos.CREATE, Casos);
   }
   getFile(fileName: string):Observable<any>{
-
     return this.http.get(APIURL.Casos.FILE + fileName,{
       responseType:"blob" as "json",
     });
   }
   postDoc(data: FormData){
-
     return this.http.post(APIURL.Casos.INSERTFILE, data);
   }
 
   // Users
   postXPSUser(User: User): Observable<any> {
-    console.log(User);
-    
     return this.http.post<any>(APIURL.Users.CREATE , User ,{responseType: 'json'});
-    // return this.http.post(`${APIURL.Users.CREATE}${User}`, {responseType: 'json'});
   }
 
   getXPSUser():Observable<any> {

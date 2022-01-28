@@ -12,7 +12,6 @@ import { APIURL } from 'src/app/shared/url';
 })
 export class AuthService {
 
-// private apiXPS: string = environment.apiXPS;
 private _auth?: User;
 
 
@@ -39,7 +38,7 @@ get auth(): User{
     return this.http.get<any>(`${ APIURL.Users.READ }`)
     .pipe(
       tap( auth=> this._auth = auth ),
-      tap( auth=> localStorage.setItem('token', auth.Usuario_Email))
+      // tap( auth=> localStorage.setItem('token', 'test'))
     )
   }
 

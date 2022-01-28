@@ -32,7 +32,6 @@ listXPS : any ={
   ngOnInit(): void {
     // debugger
     this.listXPSCasos();
-    console.log(this.auth);
     
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("index-page");
@@ -51,14 +50,15 @@ listXPSCasos(){
   this.UserName = this.XpsService.UserName;
   this.XpsService.getXPSCasos(this.listXPS).subscribe(listCasos=>{
     this.casos = listCasos;
-    console.log(this.UserName);
-    
   }) 
 }
 
 GetUserName(userName: string){
   this.XpsService.GetNameUserAuth(userName)
+ 
+  
   console.log(userName);
+  
   
 }
 

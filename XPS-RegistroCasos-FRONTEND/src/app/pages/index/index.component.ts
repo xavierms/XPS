@@ -94,6 +94,8 @@ export class IndexComponent implements OnInit, OnDestroy {
   }
   getUserName(user: string) {
     this.XpsService.GetNameUserAuth(this.UserName);
+    let getlocal  =  localStorage.setItem('token1', this.UserName)
+    console.log(getlocal);
     return this.UserName = user;
   }
   ngOnDestroy() {
