@@ -11,7 +11,8 @@ export let APIURL = {
     },
     Users:{
         READ  : Api + 'Usuarios/ReadUsuario',
-        CREATE: Api + 'Usuarios/CreateUsuarios?'      
+        CREATE: Api + 'Usuarios/CreateUsuarios?',
+        READADMIN: Api + 'Usuarios/ReadUsuarioAdmin?'      
     }
 }
 

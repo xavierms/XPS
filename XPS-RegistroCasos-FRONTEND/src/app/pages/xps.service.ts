@@ -3,7 +3,6 @@ import { HttpClient } from "@angular/common/http";
 import { Casos } from "../../interfaces/casos.interface";
 import { APIURL } from "../shared/url";
 import { Observable } from "rxjs";
-import { FormGroup } from "@angular/forms";
 import { User } from "src/interfaces/user.interface";
 
 @Injectable({
@@ -11,6 +10,14 @@ import { User } from "src/interfaces/user.interface";
 })
 export class XpsService {
   constructor(private http: HttpClient) {}
+  UserName!: string;
+
+  GetNameUserAuth(user: string){
+   this.UserName=   user;
+  console.log(user);
+
+  }
+
 
   // Casos
   getXPSCasos(params: any): Observable<Casos[]> {
@@ -45,7 +52,7 @@ export class XpsService {
     // return this.http.post(`${APIURL.Users.CREATE}${User}`, {responseType: 'json'});
   }
 
-  getXPSUser():Observable<User> {
-    return this.http.get<User>(APIURL.Users.READ);
+  getXPSUser():Observable<any> {
+    return this.http.get<any>(APIURL.Users.READ);
   }
 }

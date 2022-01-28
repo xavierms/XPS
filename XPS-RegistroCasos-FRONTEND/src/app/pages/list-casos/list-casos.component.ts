@@ -23,6 +23,7 @@ export class ListCasosComponent implements OnInit {
               private router: Router) { }
 isCollapsed = true;
 casos   :Casos[]=[];
+UserName!: string;
 listXPS : any ={
   filtro: '',
   Pageindex:1,
@@ -47,15 +48,23 @@ listXPS : any ={
   }
 
 listXPSCasos(){
+  this.UserName = this.XpsService.UserName;
   this.XpsService.getXPSCasos(this.listXPS).subscribe(listCasos=>{
     this.casos = listCasos;
-    console.log(listCasos);
+    console.log(this.UserName);
     
   }) 
 }
 
+GetUserName(userName: string){
+  this.XpsService.GetNameUserAuth(userName)
+  console.log(userName);
+  
+}
+
 logout(){
   this.router.navigate(['./home']);
+  //TODO: agregar aviso de que si esta seguro del logout
    }
 
    get auth(){

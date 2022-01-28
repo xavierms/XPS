@@ -18,12 +18,13 @@ import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
 
 import { IndexComponent } from "./index/index.component";
-import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
+
 import { ListCasosComponent } from './list-casos/list-casos.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { RegistroCasosComponent } from './registro-casos/registro-casos.component';
+import { ProfilepageComponent } from "./components/profilepage/profilepage.component";
+import { RegisterpageComponent } from "./components/registerpage/registerpage.component";
+import { LandingpageComponent } from "./components/landingpage/landingpage.component";
 
 @NgModule({
   imports: [
@@ -52,7 +53,7 @@ import { RegistroCasosComponent } from './registro-casos/registro-casos.componen
     RegisterpageComponent,
     RegistroCasosComponent,
     LandingpageComponent,
-    ListCasosComponent
+    ListCasosComponent,
   ],
   exports: [
     IndexComponent,

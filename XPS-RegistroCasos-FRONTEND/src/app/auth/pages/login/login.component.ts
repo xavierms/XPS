@@ -23,17 +23,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
+  // login(){
 
-    this.AuthService.login()
-    .subscribe(resp=>{
-      console.log(resp);
+  //   this.AuthService.login()
+  //   .subscribe(resp=>{
+  //     console.log(resp);
       
-      if(resp.id){
+  //     if(resp.id){
      
-        this.router.navigate(['./heroes']);
-      }
-    })
-     }
+  //       this.router.navigate(['./heroes']);
+  //     }
+  //   })
+  //    }
 
 }

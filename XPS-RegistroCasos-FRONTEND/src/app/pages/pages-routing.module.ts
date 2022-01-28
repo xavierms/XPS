@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
+import { ProfilepageComponent } from './components/profilepage/profilepage.component';
+import { RegisterpageComponent } from './components/registerpage/registerpage.component';
 import { ListCasosComponent } from './list-casos/list-casos.component';
 import { RegistroCasosComponent } from './registro-casos/registro-casos.component';
-import { RegisterpageComponent } from './examples/registerpage/registerpage.component';
-import { ProfilepageComponent } from './examples/profilepage/profilepage.component';
-import { LandingpageComponent } from './examples/landingpage/landingpage.component';
+
 
 const routes: Routes = [
   {

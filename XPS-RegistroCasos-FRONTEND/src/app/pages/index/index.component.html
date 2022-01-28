@@ -1545,7 +1545,7 @@
             <!-- <div class="text-center text-muted mb-4 mt-3">
               <small> Or sign in with credentials </small>
             </div> -->
-            <form role="form">
+            <form role="form" [formGroup]="formAuth">
               <div class="form-group mb-3">
                 <div
                   class="input-group input-group-alternative"
@@ -1560,6 +1560,7 @@
                     class="form-control"
                     placeholder="Email"
                     type="email"
+                    formControlName="email"
                     (focus)="focus1 = true"
                     (blur)="focus1 = false"
                   />
@@ -1579,6 +1580,8 @@
                     class="form-control"
                     placeholder="Password"
                     type="password"
+                    formControlName="password"
+
                     (focus)="focus2 = true"
                     (blur)="focus2 = false"
                   />

@@ -138,26 +138,27 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
     this.XpsService.getXPSUser().subscribe(res=>{
       const {Usuario_Email}= res;
       console.log(Usuario_Email);
-      console.log(res);
+      console.log(typeof res);
       
     })
   }
-  login(){
+  // login(){
 
-    this.AuthService.login()
-    .subscribe(resp=>{
-      console.log(resp);
+  //   this.AuthService.login()
+  //   .subscribe(resp=>{
       
-      if(resp.id == 2){
+  //     console.log(resp);
+      
+  //     if(resp.Usuario_Rol_Numero == 2){
      
-        this.router.navigateByUrl('./List');
-      }
-      else{
-        this.router.navigateByUrl('./Register-casos');
+  //       this.router.navigateByUrl('./List');
+  //     }
+  //     else{
+  //       this.router.navigateByUrl('./Register-casos');
 
-    }
-    })
-     }
+  //   }
+  //   })
+  //    }
 
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];

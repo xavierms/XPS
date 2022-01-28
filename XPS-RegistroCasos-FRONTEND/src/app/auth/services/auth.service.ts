@@ -4,17 +4,19 @@ import { environment } from '../../../environments/environment';
 import { Auth } from '../../../interfaces/auth.interfaces';
 import { map, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
+import { User } from '../../../interfaces/user.interface';
+import { APIURL } from 'src/app/shared/url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-private apiXPS: string = environment.apiXPS;
-private _auth?: Auth;
+// private apiXPS: string = environment.apiXPS;
+private _auth?: User;
 
 
-get auth(): Auth{
+get auth(): User{
   return {...this._auth! }
 }
   constructor( private http: HttpClient) { }
@@ -24,7 +26,7 @@ get auth(): Auth{
       return of(false);
     }
 
-    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/${"luis1"}`)
+    return this.http.get<any>(`${ APIURL.Users.READ }`)
                     .pipe(
                       map( auth=>{
                         this._auth= auth;
@@ -34,10 +36,10 @@ get auth(): Auth{
   }
 
   login(){
-    return this.http.get<Auth>(`${ this.apiXPS }/usuarios/${"luis1"}`)
+    return this.http.get<any>(`${ APIURL.Users.READ }`)
     .pipe(
       tap( auth=> this._auth = auth ),
-      tap( auth=> localStorage.setItem('token', auth.id.toString()))
+      tap( auth=> localStorage.setItem('token', auth.Usuario_Email))
     )
   }
 
