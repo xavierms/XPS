@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "thEcKx6PWi5ebeZ9kKg264Uq0h+xNxUcEUxSt+nzGJZKVGfw6YWGWD5XgqXALWtjT0wqBf1wgR60hZVm8dilFA==",
+  "dgSpecHash": "YQZed8uPwDfeKWkedN7TopGwmZORjG2b6mMuJLjATvTF3Y/oggSEgklSRdtZSnkpl4JNAVBvdmC9vN07PAmC7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\CoreX.csproj",
+  "projectFilePath": "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\CoreX.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\x.mejia\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\x.mejia\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

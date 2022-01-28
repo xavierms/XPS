@@ -26,12 +26,12 @@ namespace XPS_API.Controllers
         /// <summary>
         /// Crea un usuario sea un Evaluador o un usuario ordinario.
         /// </summary>
-        /// <param name="usuario">El nombre del archivo en el servidor</param>       
+        /// <param name="usuario">El nombre del usuario en el servidor</param>       
         ///<response code="200">OK. </response>     
         /// <response code="500">Error en el sistema. Ha ocurrido un error al procesar su solicitud.</response>
         /// <response code="404">NotFound. </response>  
         [HttpPost("CreateUsuarios")]
-        public ActionResult CreateUsuario([FromQuery] Usuario usuario)
+        public ActionResult CreateUsuario([FromBody] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +61,6 @@ namespace XPS_API.Controllers
         /// <summary>
         /// Lista los usuarios en XPS.
         /// </summary>
-        /// <param name="usuario">El nombre del archivo en el servidor</param>       
         ///<response code="200">OK.</response>     
         /// <response code="500">Error en el sistema. Ha ocurrido un error al procesar su solicitud.</response>
         /// <response code="404">NotFound. No se ha encontrado un archivo buscado</response>  
@@ -69,7 +68,7 @@ namespace XPS_API.Controllers
         public ActionResult<Usuario> ReadUsuario()
         {
             try
-            {               
+            {
                 return Ok(_usuariosService.ReadUsuario());
             }
             catch (Exception xx)
@@ -78,7 +77,5 @@ namespace XPS_API.Controllers
             }
 
         }
-
-       
     }
 }

@@ -38,3 +38,43 @@ C:\Users\x.mejia\source\repos\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\unix\lib
 C:\Users\x.mejia\source\repos\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\x.mejia\source\repos\XPS-API\XPS-API\bin\Debug\net5.0\CoreX.dll
 C:\Users\x.mejia\source\repos\XPS-API\XPS-API\bin\Debug\net5.0\CoreX.pdb
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\appsettings.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.exe
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.deps.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.runtimeconfig.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.runtimeconfig.dev.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\ref\XPS-API.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\XPS-API.pdb
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\CoreX.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\bin\Debug\net5.0\CoreX.pdb
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.csproj.AssemblyReference.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.AssemblyInfoInputs.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.AssemblyInfo.cs
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.csproj.CoreCompileInputs.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\staticwebassets\XPS-API.StaticWebAssets.Manifest.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\staticwebassets\XPS-API.StaticWebAssets.xml
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\scopedcss\bundle\XPS-API.styles.css
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.RazorTargetAssemblyInfo.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.csproj.CopyComplete
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\ref\XPS-API.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.pdb
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\XPS-API\obj\Debug\net5.0\XPS-API.genruntimeconfig.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\CoreX.csproj": {}
+    "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\CoreX.csproj": {}
   },
   "projects": {
-    "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\CoreX.csproj": {
+    "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\CoreX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\CoreX.csproj",
+        "projectUniqueName": "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\CoreX.csproj",
         "projectName": "CoreX",
-        "projectPath": "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\CoreX.csproj",
+        "projectPath": "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\CoreX.csproj",
         "packagesPath": "C:\\Users\\x.mejia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\x.mejia\\source\\repos\\XPS-API\\CoreX\\obj\\",
+        "outputPath": "C:\\Users\\x.mejia\\Documents\\Doc Code\\MEAN\\XPS Project\\XPS-API\\CoreX\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

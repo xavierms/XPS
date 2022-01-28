@@ -73,26 +73,11 @@ export class IndexComponent implements OnInit, OnDestroy {
   }
 
   login() {
-
-    // if(this.formAuth.controls.email.value == 'avengers.stark@usa.es' &&  this.formAuth.controls.password.value =='12345'){
-
-    //   this.router.navigateByUrl('/List');
-    // }
-    // else if(this.formAuth.controls.email.value == 'x.mejia@xps.es' && this.formAuth.controls.password.value =='12345'){
-    //   this.router.navigateByUrl('/Register-casos')
-    // }
-
-    //TODO: Login real
     this.AuthService.login().subscribe((resp) => {
-      console.log(
         resp.forEach((element) => {
-
-          console.log(element.usuario_Email);
-          
-
           if (
             this.formAuth.controls.email.value == element.usuario_Email &&
-            this.formAuth.controls.email.value == element.usuario_Email &&
+            this.formAuth.controls.password.value == element.usuario_Password &&
             element.usuario_Rol_Numero == 1
           ) {
             this.UserName = element.usuario_Nickname;
@@ -100,16 +85,14 @@ export class IndexComponent implements OnInit, OnDestroy {
             this.router.navigateByUrl("/List");
           } else if (
             this.formAuth.controls.email.value == element.usuario_Email &&
-            this.formAuth.controls.email.value == element.usuario_Email
+            this.formAuth.controls.password.value == element.usuario_Password
           ) {
             this.router.navigateByUrl("/Register-casos");
           }
         })
-      );
     });
   }
   getUserName(user: string) {
-    console.log(this.UserName =user);
     this.XpsService.GetNameUserAuth(this.UserName);
     return this.UserName = user;
   }

@@ -6,7 +6,6 @@ namespace CoreX.Servicios
     public interface IUsuariosService
     {
         public void CreateUsuario(Usuario usuario);
-        public List<Usuario> ReadUsuario();
-
+        public List<UsuarioList> ReadUsuario();
     }
 }

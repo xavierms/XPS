@@ -43,9 +43,9 @@ namespace CoreX.Servicios
             }
         }
 
-        public List<Usuario> ReadUsuario()
+        public List<UsuarioList> ReadUsuario()
         {
-            List<Usuario> usuarios = new List<Usuario>();
+            List<UsuarioList> usuarios = new List<UsuarioList>();
 
             using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("XPSConnection")))
             {
@@ -57,7 +57,7 @@ namespace CoreX.Servicios
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        Usuario usuario = new Usuario
+                        UsuarioList usuario = new UsuarioList
                         {
                             Usuario_Numero     = Convert.ToInt32(dr["Usuario_Numero"]),
                             Usuario_Nickname   = dr["Usuario_Nickname"].ToString(),

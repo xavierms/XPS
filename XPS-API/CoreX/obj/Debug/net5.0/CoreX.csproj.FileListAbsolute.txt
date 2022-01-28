@@ -10,3 +10,15 @@ C:\Users\x.mejia\source\repos\XPS-API\CoreX\obj\Debug\net5.0\CoreX.dll
 C:\Users\x.mejia\source\repos\XPS-API\CoreX\obj\Debug\net5.0\ref\CoreX.dll
 C:\Users\x.mejia\source\repos\XPS-API\CoreX\obj\Debug\net5.0\CoreX.pdb
 C:\Users\x.mejia\source\repos\XPS-API\CoreX\obj\Debug\net5.0\CoreX.csproj.AssemblyReference.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\bin\Debug\net5.0\CoreX.deps.json
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\bin\Debug\net5.0\CoreX.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\bin\Debug\net5.0\ref\CoreX.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\bin\Debug\net5.0\CoreX.pdb
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.csproj.AssemblyReference.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.AssemblyInfoInputs.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.AssemblyInfo.cs
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.csproj.CoreCompileInputs.cache
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\ref\CoreX.dll
+C:\Users\x.mejia\Documents\Doc Code\MEAN\XPS Project\XPS-API\CoreX\obj\Debug\net5.0\CoreX.pdb

@@ -39,7 +39,7 @@ namespace XPS_API.Controllers
         /// <response code="500">Error en el sistema. Ha ocurrido un error al procesar su solicitud.</response>
         /// <response code="404">NotFound. No se ha encontrado un archivo con el nombre insertado</response>  
         [HttpPost("CreateCaso")]
-        public async Task<ActionResult<List<XPSCaso>>> CreateCaso([FromQuery] XPSCaso xPSCaso)
+        public async Task<ActionResult<List<XPSCaso>>> CreateCaso([FromBody] XPSCaso xPSCaso)
         {
        
             if (ModelState.IsValid)
