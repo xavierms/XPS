@@ -12,5 +12,11 @@ export class RegistroCasosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  isCollapsed = true;
+  focus;
+  focus1;
+  focus2;
+  focus3;
+  focus4;
+  focus5;
 }
