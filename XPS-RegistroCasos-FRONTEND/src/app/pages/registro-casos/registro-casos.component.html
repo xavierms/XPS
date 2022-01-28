@@ -116,13 +116,13 @@
     <div class="content">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 col-md-6 offset-lg-0 offset-md-3">
+          <div class="col-lg-12 col-md-6 offset-lg-0 offset-md-3">
             <div class="square square-7" id="square7"></div>
             <div class="square square-8" id="square8"></div>
-            <div class="card card-register">
+            <div class="card card-register" style="margin-top: 40px; width: 650px;">
               <div class="card-header">
                 <img
-                style="margin-top: -100px;"
+                style="margin-top: -180px;"
                   alt="Card image"
                   class="card-img"
                   src="assets/img/square1-red.png"
@@ -130,130 +130,28 @@
 
                 <h1 class="card-title ml-2">Register Casos</h1>
               </div>
-              <div class="card-body">
+              <div class="content">
                 <form >
-                      <!-- NickName -->
-                  <div
-                    class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus === true }"
-                  >
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="tim-icons icon-satisfied"> </i>
+                      <div class="row">
+                    <div class="form-floating mb-3 col">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
                       </div>
-                    </div>
-                    <input
-                      class="form-control"
-                      placeholder="Nick Name"
-                      type="text"
-                      formControlName="Usuario_Nickname"
-                      (focus)="focus = true"
-                      (blur)="focus = false"
-                    />
-                  </div>
-                  <!-- Name -->
-                  <div
-                  class="input-group"
-                  [ngClass]="{ 'input-group-focus': focus1 === true }"
-                >
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="tim-icons icon-single-02"> </i>
-                    </div>
-                  </div>
-                  <input
-                    class="form-control"
-                    placeholder="Name"
-                    type="text"
-                    formControlName="Usuario_Nombre"
-                    (focus)="focus1 = true"
-                    (blur)="focus1 = false"
-                  />
-                </div>
-                <!-- LastName -->
-                <div
-                class="input-group"
-                [ngClass]="{ 'input-group-focus': focus2 === true }"
-              >
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="tim-icons icon-single-02"> </i>
-                  </div>
-                </div>
-                <input
-                  class="form-control"
-                  placeholder="Last Name"
-                  type="text"
-                  formControlName="Usuario_Apellido"
-                  (focus)="focus2 = true"
-                  (blur)="focus2 = false"
-                />
-              </div>
-              <!-- Email -->
-                  <div
-                    class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus3 === true }"
-                  >
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="tim-icons icon-email-85"> </i>
-                      </div>
-                    </div>
-                    <input
-                      class="form-control"
-                      placeholder="Email"
-                      formControlName="Usuario_Email"
-                      type="email"
-                      (focus)="focus3 = true"
-                      (blur)="focus3 = false"
-                    />
-                  </div>
-                  <!-- password -->
-                  <div
-                    class="input-group"
-                    [ngClass]="{ 'input-group-focus': focus4 === true }"
-                  >
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <i class="tim-icons icon-lock-circle"> </i>
-                      </div>
-                    </div>
-                    <input
-                      class="form-control"
-                      placeholder="Password"
-                      formControlName="Usuario_Password"
-                      type="password"
-                      (focus)="focus4 = true"
-                      (blur)="focus4 = false"
-                    />
-                  </div>
-                  <!-- confirmar password -->
-                  <div
-                  class="input-group"
-                  [ngClass]="{ 'input-group-focus': focus5 === true }"
-                >
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="tim-icons icon-lock-circle"> </i>
-                    </div>
-                  </div>
-                  <input
-                    class="form-control"
-                    placeholder="Confirm Password"
-                    type="password"
-                    (focus)="focus5 = true"
-                    (blur)="focus5 = false"
-                  />
-                </div>
-                  <div class="form-check text-left">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" />
 
-                      <span class="form-check-sign"> </span> I agree to the
-                      <a href="javascript:void(0)"> terms and conditions </a> .
-                    </label>
+                      <div class="form-floating col">
+                        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                    </div>
+                      <form class="form-floating">
+                        <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
+                        <label for="floatingInputInvalid">Invalid input</label>
+                      </form>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                      </div>
                    
-                  </div>
                   <div class="card-footer">
                  
                     <button
