@@ -17,7 +17,7 @@ namespace CoreX.Modelos
         [Required(ErrorMessage = "El apellido es requerido")]
         public string Registro_Caso_Apellido { get; set; }
 
-        [StringLength(10, MinimumLength = 10, ErrorMessage = "El telefono no puede tener más de de 10 digitos")]
+        //[StringLength(10, MinimumLength = 10, ErrorMessage = "El telefono no puede tener más de de 10 digitos")]
         public string Registro_Caso_Telefono { get; set; }
 
         [Required(ErrorMessage = "El Correo es requerido")]

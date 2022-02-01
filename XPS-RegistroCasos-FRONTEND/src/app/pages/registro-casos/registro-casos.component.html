@@ -185,8 +185,8 @@
                         <label for="floatingTextarea">Comments</label>
                       </div>
                       <div class="mb-3">
-                        <label for="formFile" (click)="UploadFile($event,0)" class="form-label">Upload file: image (jpg or png), pdf or doc. Must not exceed 2MB</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <label for="formFile"  class="form-label">Upload file: image (jpg or png), pdf or doc. Must not exceed 2MB</label>
+                        <input class="form-control" (change)="UploadFile($event)"formControlName="Registro_Documento_Ruta" type="file" id="formFile">
                       </div>
                   <div class="card-footer">
                  

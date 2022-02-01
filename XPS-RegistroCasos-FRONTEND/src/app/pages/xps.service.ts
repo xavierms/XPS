@@ -35,17 +35,17 @@ export class XpsService {
       params.PageSize;
     return this.http.get<Casos[]>(APIURL.Casos.READ + url);
   }
-  postXPSCasos(Casos: Casos) {
-    return this.http.post(APIURL.Casos.CREATE, Casos,{responseType: 'json'});
+  postXPSCasos(Casos: FormData):Observable<any> {
+    return this.http.post<any>(APIURL.Casos.CREATE,Casos,{responseType: 'json'});
   }
   getFile(fileName: string):Observable<any>{
     return this.http.get(APIURL.Casos.FILE + fileName,{
       responseType:"blob" as "json",
     });
   }
-  postDoc(data: FormData){
-    return this.http.post(APIURL.Casos.INSERTFILE, data);
-  }
+  // postDoc(data: FormData){
+  //   return this.http.post(APIURL.Casos.INSERTFILE, data);
+  // }
 
   // Users
   postXPSUser(User: User): Observable<any> {

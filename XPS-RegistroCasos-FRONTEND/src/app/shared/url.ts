@@ -7,7 +7,7 @@ export let APIURL = {
         FILE  : Api + 'XPSCaso/DescargarDocumento/',
         CREATE: Api + 'XPSCaso/CreateCaso?',
         READ  : Api + 'XPSCaso/ReadCaso?',
-        INSERTFILE: Api + 'XPSCaso/'
+        //INSERTFILE: Api + 'XPSCaso/'
     },
     Users:{
         READ  : Api + 'Usuarios/ReadUsuario',
