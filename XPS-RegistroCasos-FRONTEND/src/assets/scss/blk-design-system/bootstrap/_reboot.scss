@@ -343,11 +343,11 @@ input,
 button,
 select,
 optgroup,
-textarea {
-  margin: 0; // Remove the margin in Firefox and Safari
+textarea {// TODO:cambios textarea
+ // margin: 0; // Remove the margin in Firefox and Safari
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+  //line-height: inherit;
 }
 
 button,
@@ -397,10 +397,10 @@ input[type="month"] {
   -webkit-appearance: listbox;
 }
 
-textarea {
-  overflow: auto; // Remove the default vertical scrollbar in IE.
+textarea {// TODO:cambios textarea
+ // overflow: auto; // Remove the default vertical scrollbar in IE.
   // Textareas should really only resize vertically so they don't break their (horizontal) containers.
-  resize: vertical;
+  //resize: vertical;
 }
 
 fieldset {

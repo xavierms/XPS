@@ -38,11 +38,11 @@ listXPS : any ={
   }
 
   download(documento: Casos) {
-    this.XpsService.getFile(documento.registro_Documento_Ruta).subscribe((blob: any) => {
+    this.XpsService.getFile(documento.file).subscribe((blob: any) => {
       console.log(documento);
 
       var file = new Blob([blob], { type: 'application/octet-stream' });
-      FileSaver.saveAs(file, documento.registro_Documento_Ruta);
+      FileSaver.saveAs(file, documento.file);
     });
   }
 
@@ -53,14 +53,10 @@ listXPSCasos(){
   }) 
 }
 
-GetUserName(userName: string){
-  this.XpsService.GetNameUserAuth(userName)
- 
-  
-  console.log(userName);
-  
-  
-}
+// GetUserName(userName: string){
+//   this.XpsService.GetNameUserAuth(userName)
+//   console.log(userName); 
+// }
 
 logout(){
   this.router.navigate(['./home']);

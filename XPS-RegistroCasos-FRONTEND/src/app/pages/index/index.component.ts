@@ -9,6 +9,8 @@ import { ValidatorService } from "../../shared/validator/validator.service";
 import { XpsService } from "../xps.service";
 import { Casos } from "../../../interfaces/casos.interface";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+// import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: "app-index",
@@ -21,7 +23,8 @@ export class IndexComponent implements OnInit, OnDestroy {
     private XpsService: XpsService,
     private fb: FormBuilder,
     private ValidatorService: ValidatorService,
-    private EmailValidatorService: EmailValidatorService
+    private EmailValidatorService: EmailValidatorService,
+    // private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -73,12 +76,13 @@ export class IndexComponent implements OnInit, OnDestroy {
   }
 
   login() {
+    debugger
     this.AuthService.login().subscribe((resp) => {
         resp.forEach((element) => {
           if (
             this.formAuth.controls.email.value == element.usuario_Email &&
             this.formAuth.controls.password.value == element.usuario_Password &&
-            element.usuario_Rol_Numero == 1
+            element.usuario_Rol_Numero == 2
           ) {
             this.UserName = element.usuario_Nickname;
           this.getUserName(this.UserName)
@@ -89,6 +93,10 @@ export class IndexComponent implements OnInit, OnDestroy {
           ) {
             this.router.navigateByUrl("/Register-casos");
           }
+          // else{
+          //    this.toastr.error('Email or Password is wrong!');
+            
+          // }
         })
     });
   }
@@ -103,45 +111,15 @@ export class IndexComponent implements OnInit, OnDestroy {
     body.classList.remove("index-page");
   }
 
-  download(documento: Casos) {
-    this.XpsService.getFile(documento.registro_Documento_Ruta).subscribe(
-      (blob: any) => {
-        console.log(documento);
+  // download(documento: Casos) {
+  //   this.XpsService.getFile(documento.registro_Documento_Ruta).subscribe(
+  //     (blob: any) => {
+  //       console.log(documento);
 
-        var file = new Blob([blob], { type: "application/octet-stream" });
-        FileSaver.saveAs(file, documento.registro_Documento_Ruta);
-      }
-    );
-  }
-  UploadFile(event: any, Documento_Secuencia: number) {
-    console.log(Documento_Secuencia);
-    let fileList: FileList = event.target.files;
-    //   if(validateFormat){
-    if (fileList.length > 0) {
-      let file: File = fileList[0];
-
-      if (file.size / 1048576 > 10) {
-        // this.toastr.error('El peso del archivo no debe ser mayor a 10MB');
-      } else {
-        let formData: FormData = new FormData();
-        formData.append("Files", file);
-        formData.append("Documento_Id", Documento_Secuencia.toString());
-        // formData.append('Usuario', "luisff")
-        console.log(formData);
-        this.XpsService.postDoc(formData).subscribe(
-          (res) => {
-            // this.toastr.success('Documento enviado correctamente');
-          },
-          (error) => {
-            // this.toastr.error(error.error);
-          }
-        );
-
-        // setTimeout(() => {
-        //   this.ResetarListados();
-        //   this.getListado();
-        // }, 1000);
-      }
-    }
-  }
+  //       var file = new Blob([blob], { type: "application/octet-stream" });
+  //       FileSaver.saveAs(file, documento.registro_Documento_Ruta);
+  //     }
+  //   );
+  // }
+  
 }

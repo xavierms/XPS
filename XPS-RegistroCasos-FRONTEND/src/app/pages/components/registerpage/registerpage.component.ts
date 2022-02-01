@@ -11,18 +11,20 @@ import { XpsService } from '../../xps.service';
   templateUrl: "registerpage.component.html"
 })
 export class RegisterpageComponent implements OnInit, OnDestroy {
-  isCollapsed = true;
-  focus;
-  focus1;
-  focus2;
-  focus3;
-  focus4;
-  focus5;
-  user: User[]=[];
   constructor(private FormBuilder: FormBuilder,
-              private XpsService: XpsService,
-              private router:Router,
-              private AuthService: AuthService  ) {}
+    private XpsService: XpsService,
+    private router:Router,
+    private AuthService: AuthService  ) {}
+    isCollapsed = true;
+    focus;
+    focus1;
+    focus2;
+    focus3;
+    focus4;
+    focus5;
+    user: User[]=[];
+
+    
   @HostListener("document:mousemove", ["$event"])
   onMouseMove(e) {
     var squares1 = document.getElementById("square1");
@@ -106,18 +108,15 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
 
   createUser(){
     // debugger
-    console.log(this.user);
-
-    console.log('values controls form',this.formPostUser);
     if (this.formPostUser.valid) {
       
     let users: User = {
-      Usuario_Nickname: this.formPostUser.get("Usuario_Nickname")?.value,
-      Usuario_Nombre: this.formPostUser.get("Usuario_Nombre")?.value,
-      Usuario_Apellido: this.formPostUser.get("Usuario_Apellido")?.value,
-      Usuario_Email: this.formPostUser.get("Usuario_Email")?.value,
-      Usuario_Password: this.formPostUser.get("Usuario_Password")?.value,
-      Usuario_Rol_Numero:  this.formPostUser.get("Usuario_Rol_Numero")?.value
+      Usuario_Nickname  : this.formPostUser.get("Usuario_Nickname")?.value,
+      Usuario_Nombre    : this.formPostUser.get("Usuario_Nombre")?.value,
+      Usuario_Apellido  : this.formPostUser.get("Usuario_Apellido")?.value,
+      Usuario_Email     : this.formPostUser.get("Usuario_Email")?.value,
+      Usuario_Password  : this.formPostUser.get("Usuario_Password")?.value,
+      Usuario_Rol_Numero: this.formPostUser.get("Usuario_Rol_Numero")?.value
     }
     console.log(this.user);
 
@@ -142,23 +141,7 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
       
     })
   }
-  // login(){
 
-  //   this.AuthService.login()
-  //   .subscribe(resp=>{
-      
-  //     console.log(resp);
-      
-  //     if(resp.Usuario_Rol_Numero == 2){
-     
-  //       this.router.navigateByUrl('./List');
-  //     }
-  //     else{
-  //       this.router.navigateByUrl('./Register-casos');
-
-  //   }
-  //   })
-  //    }
 
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];

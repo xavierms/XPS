@@ -11,13 +11,18 @@ import { User } from "src/interfaces/user.interface";
 export class XpsService {
   constructor(private http: HttpClient) {}
   UserName!: string;
+  UserNumber!: number;
 
   GetNameUserAuth(user: string){
    this.UserName=   user;
   console.log(user);
   return user
   }
-
+  GetNumberUser(userNumber: number){
+    this.UserNumber=   userNumber;
+   console.log(userNumber);
+   return userNumber
+   }
 
   // Casos
   getXPSCasos(params: any): Observable<Casos[]> {
@@ -31,7 +36,7 @@ export class XpsService {
     return this.http.get<Casos[]>(APIURL.Casos.READ + url);
   }
   postXPSCasos(Casos: Casos) {
-    return this.http.post(APIURL.Casos.CREATE, Casos);
+    return this.http.post(APIURL.Casos.CREATE, Casos,{responseType: 'json'});
   }
   getFile(fileName: string):Observable<any>{
     return this.http.get(APIURL.Casos.FILE + fileName,{

@@ -103,8 +103,8 @@
           </tr>
         </thead>
         <tbody >
-          <tr class="table-active" *ngFor="let listCasos of casos">
-            <th scope="row">{{listCasos.registro_Caso_Numero}}</th>
+          <tr class="table-active" *ngFor="let listCasos of casos; let i= index">
+            <th scope="row" style="color: white;">{{i + 1}}</th>
             <td>{{listCasos.registro_Caso_Nombre}}</td>
             <td>{{listCasos.registro_Caso_Apellido}}</td>
             <td>{{listCasos.registro_Caso_Telefono}}</td>
