@@ -1,5 +1,5 @@
 {
-  "name": "blk-design-system-angular",
+  "name": "xps",
   "version": "1.2.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,7 @@
     "description": "XPS",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "e2e": "ng e2e"
   },
   "repository": {
     "type": "git",
@@ -56,12 +55,6 @@
     "blk design system",
     "blk design system angular"
   ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/blk-design-system-angular/issues"
-  },
-  "homepage": "https://demos.creative-tim.com/blk-design-system-angular/",
   "private": false,
   "dependencies": {
     "@angular/animations": "^11.0.5",
