@@ -38,21 +38,19 @@ FormRegisterCasos: FormGroup = this.FormBuilder.group({
   registro_Caso_Correo    : ['',Validators.required],
   registro_Caso_Motivo    : ['',Validators.required],
   registro_Caso_Comentario: ['',Validators.required],
-  Registro_Documento_Ruta: ['',Validators.required]
+  registro_Documento_Ruta : ['',Validators.required]
 })
 
 createCasos(){
 
-console.log('casos');
-
 if (this.FormRegisterCasos.valid) {
   debugger
-  this.casos.append("Registro_Caso_Nombre", this.FormRegisterCasos.get("registro_Caso_Nombre")?.value);
-  this.casos.append("Registro_Caso_Apellido", this.FormRegisterCasos.get("registro_Caso_Apellido")?.value);
-  this.casos.append("registro_Caso_Telefono", this.FormRegisterCasos.get("registro_Caso_Telefono")?.value);
-  this.casos.append("Registro_Caso_Correo", this.FormRegisterCasos.get("registro_Caso_Correo")?.value);
-  this.casos.append("Registro_Caso_Motivo", this.FormRegisterCasos.get("registro_Caso_Motivo")?.value);
-  this.casos.append("Registro_Caso_Comentario", this.FormRegisterCasos.get("registro_Caso_Comentario")?.value);
+  this.casos.append("Registro_Caso_Nombre",    this.FormRegisterCasos.get("registro_Caso_Nombre")?.value);
+  this.casos.append("Registro_Caso_Apellido",  this.FormRegisterCasos.get("registro_Caso_Apellido")?.value);
+  this.casos.append("registro_Caso_Telefono",  this.FormRegisterCasos.get("registro_Caso_Telefono")?.value);
+  this.casos.append("Registro_Caso_Correo",    this.FormRegisterCasos.get("registro_Caso_Correo")?.value);
+  this.casos.append("Registro_Caso_Motivo",    this.FormRegisterCasos.get("registro_Caso_Motivo")?.value);
+  this.casos.append("Registro_Caso_Comentario",this.FormRegisterCasos.get("registro_Caso_Comentario")?.value);
   this.casos.append("usuario_Numero", "3");
   // this.casos.append("Registro_Documento_Ruta", this.FormRegisterCasos.get("Registro_Documento_Ruta")?.value);
 
@@ -60,8 +58,8 @@ if (this.FormRegisterCasos.valid) {
   
   this.XpsService.postXPSCasos(this.casos)
                  .subscribe(resp=>{
-                  debugger
-                //  this.router.navigateByUrl('/Home')
+                
+               // this.router.navigateByUrl('/Home')
                 console.log('caso added!',resp);
 
                  })

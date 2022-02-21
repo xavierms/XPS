@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '../auth/guard/auth.guard';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { ProfilepageComponent } from './components/profilepage/profilepage.component';
 import { RegisterpageComponent } from './components/registerpage/registerpage.component';
@@ -10,7 +11,9 @@ import { RegistroCasosComponent } from './registro-casos/registro-casos.componen
 const routes: Routes = [
   {
     path: 'List',
-    component: ListCasosComponent
+    component: ListCasosComponent,
+    canLoad: [ AuthGuard ],
+    // canActivate: [ AuthGuard ]
   },
   {
     path: 'Register',

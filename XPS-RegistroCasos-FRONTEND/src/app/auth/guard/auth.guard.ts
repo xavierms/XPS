@@ -27,16 +27,12 @@ export class AuthGuard implements CanActivate, CanLoad {
       );
       
 
-    //   if (this.AuthService.auth.id) {
-    //     return true
-    //   }
-    //   console.log('Bloqueado por el AuthGuard - CanActive');
-    // return true;
   }
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean>  | boolean  {
-
+ console.log('canload');
+ 
       return this.AuthService.verificacionAutenticacion()
       .pipe(
         tap( estaAutenticado =>{
@@ -45,13 +41,6 @@ export class AuthGuard implements CanActivate, CanLoad {
           }
         })
       );;
-  
-    //   if (this.AuthService.auth.id) {
-    //     return true
-    //   }
-    //   console.log('Bloqueado por el AuthGuard - CanLoad');
-      
-      
-    // return false;
+
   }
 }

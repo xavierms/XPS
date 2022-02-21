@@ -38,4 +38,5 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.onWindowScroll(event);
   }
+  title: string="XPS"
 }

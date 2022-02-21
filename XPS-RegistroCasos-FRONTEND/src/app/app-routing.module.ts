@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { Routes, RouterModule } from "@angular/router";
 
 import { IndexComponent } from "./pages/index/index.component";
+import { AuthGuard } from "./auth/guard/auth.guard";
 // import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
 // import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 // import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
@@ -12,8 +13,9 @@ const routes: Routes = [
 
   {
     path:'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
-
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule ),
+    canLoad: [ AuthGuard ],
+    // canActivate: [ AuthGuard ]
   },
   { path: "", 
     redirectTo: "home", 

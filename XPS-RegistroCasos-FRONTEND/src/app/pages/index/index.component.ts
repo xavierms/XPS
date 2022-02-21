@@ -9,7 +9,7 @@ import { ValidatorService } from "../../shared/validator/validator.service";
 import { XpsService } from "../xps.service";
 import { Casos } from "../../../interfaces/casos.interface";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-// import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class IndexComponent implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private ValidatorService: ValidatorService,
     private EmailValidatorService: EmailValidatorService,
-    // private toastr: ToastrService
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -32,28 +32,9 @@ export class IndexComponent implements OnInit, OnDestroy {
     this.getUserName(this.UserName);
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("index-page");
+    console.log(this.toastr.error('Good'));
 
-    // var slider = document.getElementById("sliderRegular");
-
-    // noUiSlider.create(slider, {
-    //   start: 40,
-    //   connect: false,
-    //   range: {
-    //     min: 0,
-    //     max: 100
-    //   }
-    // });
-
-    // var slider2 = document.getElementById("sliderDouble");
-
-    // noUiSlider.create(slider2, {
-    //   start: [20, 60],
-    //   connect: true,
-    //   range: {
-    //     min: 0,
-    //     max: 100
-    //   }
-    // });
+    
   }
   focus;
   focus1;
@@ -76,27 +57,36 @@ export class IndexComponent implements OnInit, OnDestroy {
   }
 
   login() {
-    debugger
+    
     this.AuthService.login().subscribe((resp) => {
-        resp.forEach((element) => {
+      resp.forEach((element) => {
+          
           if (
             this.formAuth.controls.email.value == element.usuario_Email &&
             this.formAuth.controls.password.value == element.usuario_Password &&
             element.usuario_Rol_Numero == 2
+            
           ) {
+            
             this.UserName = element.usuario_Nickname;
-          this.getUserName(this.UserName)
-            this.router.navigateByUrl("/List");
+            this.getUserName(this.UserName)
+            this.toastr.success('Good');
+            console.log(this.toastr.error('Good'));
+            
+            setTimeout(() => {
+              
+              this.router.navigateByUrl("/List");
+            }, 1000);
           } else if (
             this.formAuth.controls.email.value == element.usuario_Email &&
             this.formAuth.controls.password.value == element.usuario_Password
           ) {
             this.router.navigateByUrl("/Register-casos");
           }
-          // else{
-          //    this.toastr.error('Email or Password is wrong!');
+          else{
+               this.toastr.error('Email or Password is wrong!','test');
             
-          // }
+          }
         })
     });
   }
@@ -111,15 +101,6 @@ export class IndexComponent implements OnInit, OnDestroy {
     body.classList.remove("index-page");
   }
 
-  // download(documento: Casos) {
-  //   this.XpsService.getFile(documento.registro_Documento_Ruta).subscribe(
-  //     (blob: any) => {
-  //       console.log(documento);
 
-  //       var file = new Blob([blob], { type: "application/octet-stream" });
-  //       FileSaver.saveAs(file, documento.registro_Documento_Ruta);
-  //     }
-  //   );
-  // }
   
 }

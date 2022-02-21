@@ -38,16 +38,20 @@ listXPS : any ={
   }
 
   download(documento: Casos) {
-    this.XpsService.getFile(documento.file).subscribe((blob: any) => {
+    console.log(documento);
+    
+    debugger
+    this.XpsService.getFile(documento.registro_Documento_Ruta).subscribe((blob: any) => {
       console.log(documento);
 
       var file = new Blob([blob], { type: 'application/octet-stream' });
-      FileSaver.saveAs(file, documento.file);
+      FileSaver.saveAs(file, documento.registro_Documento_Ruta);
     });
   }
 
 listXPSCasos(){
   this.UserName = this.XpsService.UserName;
+  
   this.XpsService.getXPSCasos(this.listXPS).subscribe(listCasos=>{
     this.casos = listCasos;
   }) 

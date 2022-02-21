@@ -1,5 +1,4 @@
-
-  <nav
+<nav
   class="navbar navbar-expand-lg fixed-top navbar-transparent"
   color-on-scroll="100"
   id="navbar-top"
@@ -34,22 +33,25 @@
       [collapse]="isCollapsed"
       id="navigation"
     >
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/home']"> Home </a>
-      </li>
-   
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']"> Home </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" id="logout"  (click)="logout()"  > Logout </a>
-      </li>
-      <li class="nav-item">
-         <a class="nav-link"   >User: &nbsp;<strong style="font-style: oblique;">{{ UserName }}</strong> </a><!--{{ auth.usuario }} -->
-      </li>
-      <!-- <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link" id="logout" (click)="logout()"> Logout </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            >User: &nbsp;<strong style="font-style: oblique">{{
+              UserName
+            }}</strong> </a
+          ><!--{{ auth.usuario }} -->
+        </li>
+        <!-- <li class="nav-item">
         <a class="nav-link" href="javascript:void(0)"> Settings </a>
       </li> -->
-    </ul>
+      </ul>
 
       <div class="navbar-collapse-header">
         <div class="row">
@@ -69,9 +71,36 @@
           </div>
         </div>
       </div>
-    <!-- Mi logo -->
+      <!-- Mi logo -->
     </div>
   </div>
+  <!-- <div class="section section-notifications" id="notifications">
+    <div class="container">
+      <div class="space"></div>
+  
+ 
+      <alert class="alert-with-icon"
+        >
+        <div
+          role="alert"
+          class="alert alert-warning alert-with-icon alert-dismissible ng-star-inserted"
+        >
+          <button
+            aria-label="Close"
+            class="close ng-star-inserted"
+            type="button"
+          >
+            <span aria-hidden="true">×</span
+            ><span class="sr-only">Close</span></button
+          ><span class="tim-icons icon-bulb-63" data-notify="icon"></span
+          ><span
+            ><b> Warning! - </b> This is a regular notification made with
+            ".alert-warning"
+          </span>
+        </div></alert>
+    </div>
+  </div> -->
+  >
 </nav>
 <div class="wrapper">
   <div class="page-header header-filter">
@@ -83,61 +112,55 @@
     <div class="squares square6"></div>
     <div class="squares square7"></div>
     <div class="container col-10">
-      <div class="content-center ">
+      <div class="content-center">
         <!-- <h1 class="h1-seo">XPS•</h1> -->
-        <h3>
-          X P Solutions | List of cases
-        </h3>
-      <table class="table table-hover table-bordered " >
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">LastName</th>
-            <th scope="col">Phone</th>
-            <th scope="col">purpose</th>
-            <th scope="col">observation</th>
-            <th scope="col">User</th>
-            <th scope="col">DOC</th>
-    
-          </tr>
-        </thead>
-        <tbody >
-          <tr class="table-active" *ngFor="let listCasos of casos; let i= index">
-            <th scope="row" style="color: white;">{{i + 1}}</th>
-            <td>{{listCasos.registro_Caso_Nombre}}</td>
-            <td>{{listCasos.registro_Caso_Apellido}}</td>
-            <td>{{listCasos.registro_Caso_Telefono}}</td>
-            <td>{{listCasos.registro_Caso_Motivo}}</td>
-            <td>{{listCasos.registro_Caso_Comentario}}</td>
-            <td>{{listCasos.usuario_Nickname}}</td> 
-            <td>{{listCasos.Registro_Documento_Ruta}}</td> 
-            <td (click)="download(listCasos)"><i class="fas fa-download"></i> Descargar documento </td>
-            
-          </tr>
-         
-        </tbody>
-      </table>
-      <div class="container col-5">        
-         <div class="">
-           <pagination
-            class="pagination-danger "
-            
-            [totalItems]="30"
-          >
-          </pagination> 
-        
-      <br />
-    </div>
-  </div>
-    
-    </div>
+        <h3>X P Solutions | List of cases</h3>
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Phone</th>
+              <th scope="col">purpose</th>
+              <th scope="col">observation</th>
+              <th scope="col">User</th>
+              <th scope="col">DOC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="table-active"
+              *ngFor="let listCasos of casos; let i = index"
+            >
+              <th scope="row" style="color: white">{{ i + 1 }}</th>
+              <td>{{ listCasos.registro_Caso_Nombre }}</td>
+              <td>{{ listCasos.registro_Caso_Apellido }}</td>
+              <td>{{ listCasos.registro_Caso_Telefono }}</td>
+              <td>{{ listCasos.registro_Caso_Motivo }}</td>
+              <td>{{ listCasos.registro_Caso_Comentario }}</td>
+              <td>{{ listCasos.usuario_Nickname }}</td>
+              <td>{{ listCasos.Registro_Documento_Ruta }}</td>
+              <td (click)="download(listCasos)">
+                <i class="fas fa-download"></i> Descargar documento
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="container col-5">
+          <div class="">
+            <pagination class="pagination-danger" [totalItems]="30">
+            </pagination>
+
+            <br />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  
-  <div class="main">    
-  <!--  <div class="section section-pagination">
+  <div class="main">
+    <!--  <div class="section section-pagination">
      <img class="path" src="assets/img/path4.png" />
       <img class="path path1" src="assets/img/path5.png" /> 
       <div class="container">
@@ -167,13 +190,6 @@
       </div>
     </div>-->
 
-
-
-
-
-   
-
-    
     <!-- <div class="section section-signup">
       <div class="container">
         <div class="squares square-1"></div>
@@ -204,83 +220,87 @@
       </div>
     </div> -->
 
-
-
-
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"><h1 class="title">XPS•</h1></div>
-        <div class="col-md-3">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/home']"> Home </a>
-            </li>
-            <!-- <li class="nav-item">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><h1 class="title">XPS•</h1></div>
+          <div class="col-md-3">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']"> Home </a>
+              </li>
+              <!-- <li class="nav-item">
               <a class="nav-link" [routerLink]="['/landing']"> Landing </a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/register']"> Register </a>
-            </li>
-            <!-- <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/register']"> Register </a>
+              </li>
+              <!-- <li class="nav-item">
               <a class="nav-link" [routerLink]="['/profile']"> Profile </a>
             </li> -->
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="https://creative-tim.com/contact-us?ref=blkdsa-footer">
-                Contact Us
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://creative-tim.com/contact-us?ref=blkdsa-footer"
+                >
+                  Contact Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://creative-tim.com/about-us?ref=blkdsa-footer"
+                >
+                  About Us
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://creative-tim.com/blog?ref=blkdsa-footer"
+                >
+                  Blog
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://opensource.org/licenses/MIT">
+                  License
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3 class="title">Follow us:</h3>
+            <div class="btn-wrapper profile">
+              <a
+                class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+                href="https://twitter.com/creativetim"
+                target="_blank"
+              >
+                <i class="fab fa-twitter"> </i>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://creative-tim.com/about-us?ref=blkdsa-footer">
-                About Us
+              <a
+                class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
+                href="https://www.facebook.com/creativetim"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-square"> </i>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://creative-tim.com/blog?ref=blkdsa-footer">
-                Blog
+              <a
+                class="btn btn-icon btn-neutral btn-round btn-simple"
+                href="https://dribbble.com/creativetim"
+                target="_blank"
+              >
+                <i class="fab fa-dribbble"> </i>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://opensource.org/licenses/MIT">
-                License
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h3 class="title">Follow us:</h3>
-          <div class="btn-wrapper profile">
-            <a
-              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
-              href="https://twitter.com/creativetim"
-              target="_blank"
-            >
-              <i class="fab fa-twitter"> </i>
-            </a>
-            <a
-              class="btn btn-icon btn-neutral btn-round btn-simple mr-1"
-              href="https://www.facebook.com/creativetim"
-              target="_blank"
-            >
-              <i class="fab fa-facebook-square"> </i>
-            </a>
-            <a
-              class="btn btn-icon btn-neutral btn-round btn-simple"
-              href="https://dribbble.com/creativetim"
-              target="_blank"
-            >
-              <i class="fab fa-dribbble"> </i>
-            </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </div>
-

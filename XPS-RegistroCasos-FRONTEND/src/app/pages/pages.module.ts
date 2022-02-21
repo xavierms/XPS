@@ -16,6 +16,8 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
 import { ModalModule } from "ngx-bootstrap/modal";
 import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
+import { ToastrModule } from 'ngx-toastr';
+
 
 import { IndexComponent } from "./index/index.component";
 
@@ -25,6 +27,7 @@ import { RegistroCasosComponent } from './registro-casos/registro-casos.componen
 import { ProfilepageComponent } from "./components/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./components/registerpage/registerpage.component";
 import { LandingpageComponent } from "./components/landingpage/landingpage.component";
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
 
 @NgModule({
   imports: [
@@ -45,7 +48,8 @@ import { LandingpageComponent } from "./components/landingpage/landingpage.compo
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   declarations: [
     IndexComponent,
@@ -54,6 +58,7 @@ import { LandingpageComponent } from "./components/landingpage/landingpage.compo
     RegistroCasosComponent,
     LandingpageComponent,
     ListCasosComponent,
+    UploadFileComponent,
   ],
   exports: [
     IndexComponent,
